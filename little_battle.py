@@ -766,7 +766,7 @@ def main():
     try:
         width, height, waters, woods, foods, golds = load_config_file(sys.argv[1])
     except FileNotFoundError:
-        print("Warning: no such file founded")
+        sys.exit("Warning: {} file not found".format(sys.argv[1]))
 
     # -----------------------------game starts---------------------------------
     print("Game Started: Little Battle! (enter QUIT to quit the game)")
